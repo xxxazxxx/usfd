@@ -5,7 +5,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<title>USFD RAIL MUSEUM INAUGURATION</title>
-	<script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.js"></script>
+	<script type="text/javascript" src="jquery-1.10.2.min.js"></script>
 	<script src="jquery.easing.1.3.js" type="text/javascript"></script>  
 
 	<script type="text/javascript">
@@ -15,18 +15,20 @@
 		
 			$(".rope").click(function(){
 				$(this).blur();
-				if ($curtainopen == false){ 
+				if ($curtainopen == false){
+					$(".intro-curtain").hide();
 					audioElement.play();
-					$(this).stop().animate({top: '0px' }, {queue:false, duration:350, easing:'easeOutBounce'}); 
-					$(".leftcurtain").stop().animate({width:'60px'}, 2000 );
-					$(".rightcurtain").stop().animate({width:'60px'},2000 );
+					$(this).stop().animate({top: '0px' }, {queue:false, duration:1000, easing:'easeOutBounce'}); 
+					$(".leftcurtain").stop().animate({width:'60px'}, 7000 );
+					$(".rightcurtain").stop().animate({width:'60px'},7000 );
 					$curtainopen = true;
 				}else{
 					audioElement.pause();
-					$(this).stop().animate({top: '-40px' }, {queue:false, duration:350, easing:'easeOutBounce'}); 
-					$(".leftcurtain").stop().animate({width:'50%'}, 2000 );
-					$(".rightcurtain").stop().animate({width:'51%'}, 2000 );
+					$(this).stop().animate({top: '-40px' }, {queue:false, duration:1000, easing:'easeOutBounce'}); 
+					$(".leftcurtain").stop().animate({width:'50%'}, 1000 );
+					$(".rightcurtain").stop().animate({width:'51%'}, 1000 );
 					$curtainopen = false;
+					$(".intro-curtain").show();
 				}
 				return false;
 			});
@@ -56,17 +58,28 @@
 	    body {
 	    	font-family: sans-serif;
 	    	text-align: center;
-	    	background: #4f3722 url('images/darkcurtain.jpg') repeat-x;
+	    	background: #fff url('images/darkcurtain.jpg') repeat-x;
 	    }
 	    img{
 			border: none;
 		}
 		.intro {
-			color: white;
+			color: darkblue;
 			width: 100%;
-			top: 555px;
+			top: 525px;
 			position: absolute;
 			z-index: 2;
+    	background: #fff url('images/flower.jpg');
+    	height: 200px;
+		}
+		.intro-curtain {
+			color: gold;
+			width: 70%;
+			top: 100px;
+			left: 15%;
+			right: 15%;
+			position: absolute;
+			z-index: 5;
 		}
 	  .leftcurtain{
 			width: 50%;
@@ -90,31 +103,81 @@
 		}
 		.logo{
 			margin: 0px auto;
-			margin-top: 80px;
+			margin-top: 20px;
 			width: 800px;
-			height: 400px;
+			height: 470px;
 		}
 		.rope{
 			position: absolute;
 			top: -40px;
-			left: 70%;
+			left: 85%;
 			z-index: 4;
+		}
+		.modal-body {
+			position: absolute;
+			color: white;
+			margin: 0px auto;
+			margin-top: 80px;
+			width: 600px;
+			height: 400px;
+			left: 30%;
+			right: 30%;
+			line-height: 1.2em;
+		}
+		.logo-right {
+			position: absolute;
+			right: 20px;
+			top: 755px;
+			position: absolute;
+			z-index: 5;
 		}
 	   
 	</style>
+		}
 </head>
 
 <body>
 	<div class="leftcurtain"><img src="images/frontcurtain.jpg"/></div>
 	<div class="rightcurtain"><img src="images/frontcurtain.jpg"/></div>
-	<a href="http://quiz.railtracks.in/"><img class="logo" src="images/usfd.png"/></a>
+	<a href="http://quiz.railtracks.in/"><img class="logo" src="images/usfd3.png"/></a>
+
+	<!--div class="modal-body">
+    <p>My Dear P.Way Engineers,</p>
+    <blockquote>
+      <h4>"Secrets to success is learning from past failure" <small>- Albert Einstein</small></h4>
+      <p><small>Albert Einstein</small></p>
+    <p>
+      Inspired from this noble thought, “USFD Rail Museum” – A Center for Excellence established on W. Rly. will provide a unique platform to upgrade the knowledge of USFD operators and other P. Way maintainers through audio-visual aids.</p>
+    <p>
+      Our aim is to keep the track with zero failure. To achieve that, it is essential to identify the defects and remove them well before it fails. USFD being a state of art technology for finding the defects developed in track, through Knowledge and skill of an USFD operator will enhance track safety to manifold.</p>
+    <p>
+      I am sure playing the online USFD Quiz launched at this museum will not only augment the technical standard of our P. Way engineers but in turn will help in constant up gradation of their skill.</p>
+    <p> Best Wishes</p>
+    <h4 class="pull-right">S.N. Agrawal</h4>
+    <h4 class="pull-right">Principal Chief Engineer</h4>
+
+	</div-->
+	
 	<a class="rope" href="#">
-		<img src="images/rope.png"/>
+		<img src="images/rope3.png"/>
 	</a>
+
+
 	<div class="intro">
-		<h1>Welcome</h1>
-		<h2>USFD RAIL MUSEUM INAUGURATION</h2>
+		<!--h1 style="font-size: 4em;">USFD RAIL MUSEUM</h1-->
+		<h1 style="margin-top:30px;">Under the aegis of IPWE (I),</h1>
+		<h1>Western Railway Chapter.</h1>
+		<img style="float:right; margin:-75px 40px;" src="images/logo.jpg"/>
+		<br>
 	</div>
+
+	<div class="intro-curtain">
+		<h1 style="font-size: 4.4em;margin-bottom: 50px;">WELCOME</h1>
+		<h1 style="font-size: 3em;">INAUGURATION OF</h1>
+		<h1 style="font-size: 3em;">USFD RAIL MUSEUM &</h1>
+		<h1 style="font-size: 3em;">LAUNCH OF USFD QUIZ</h1>
+	</div>
+
 	<!--audio controls="controls" src="start.mp3" autoplay="true" style="display:none;" /-->
 
 </body>
