@@ -17,6 +17,7 @@
 				$(this).blur();
 				if ($curtainopen == false){
 					$(".intro-curtain").hide();
+					$(".rope").hide();
 					audioElement.play();
 					$(this).stop().animate({top: '0px' }, {queue:false, duration:1000, easing:'easeOutBounce'}); 
 					$(".leftcurtain").stop().animate({width:'60px'}, 7000 );
@@ -58,7 +59,7 @@
 	    body {
 	    	font-family: sans-serif;
 	    	text-align: center;
-	    	background: #fff url('images/darkcurtain.jpg') repeat-x;
+	    	background: #fff url('images/darkcurtain2.jpg') repeat-x;
 	    }
 	    img{
 			border: none;
@@ -66,9 +67,9 @@
 		.intro {
 			color: darkblue;
 			width: 100%;
-			top: 525px;
+			top: 625px;
 			position: absolute;
-			z-index: 2;
+			z-index: 0;
     	background: #fff url('images/flower.jpg');
     	height: 200px;
 		}
@@ -83,7 +84,7 @@
 		}
 	  .leftcurtain{
 			width: 50%;
-			height: 495px;
+			height: 595px;
 			top: 0px;
 			left: 0px;
 			position: absolute;
@@ -91,7 +92,7 @@
 		}
 		 .rightcurtain{
 			width: 51%;
-			height: 495px;
+			height: 595px;
 			right: 0px;
 			top: 0px;
 			position: absolute;
@@ -104,8 +105,8 @@
 		.logo{
 			margin: 0px auto;
 			margin-top: 20px;
-			width: 800px;
-			height: 470px;
+			width: 1000px;
+			height: 570px;
 		}
 		.rope{
 			position: absolute;
@@ -127,7 +128,7 @@
 		.logo-right {
 			position: absolute;
 			right: 20px;
-			top: 755px;
+			top: 855px;
 			position: absolute;
 			z-index: 5;
 		}
@@ -139,7 +140,7 @@
 <body>
 	<div class="leftcurtain"><img src="images/frontcurtain.jpg"/></div>
 	<div class="rightcurtain"><img src="images/frontcurtain.jpg"/></div>
-	<a href="http://quiz.railtracks.in/"><img class="logo" src="images/usfd3.png"/></a>
+	<a href="http://quiz.railtracks.in/"><img class="logo" src="images/usfd2.png"/></a>
 
 	<!--div class="modal-body">
     <p>My Dear P.Way Engineers,</p>
@@ -172,10 +173,10 @@
 	</div>
 
 	<div class="intro-curtain">
-		<h1 style="font-size: 4.4em;margin-bottom: 50px;">WELCOME</h1>
-		<h1 style="font-size: 3em;">INAUGURATION OF</h1>
-		<h1 style="font-size: 3em;">USFD RAIL MUSEUM &</h1>
+		<h1 style="font-size: 4.4em;margin-bottom:50px;">WELCOME</h1>
+		<h1 style="font-size: 3em">ON THE OCCASION OF</h1>
 		<h1 style="font-size: 3em;">LAUNCH OF USFD QUIZ</h1>
+		<h1 style="font-size: 3em">DATE : 11/11/2014</h1>
 	</div>
 
 </body>
